@@ -1,0 +1,26 @@
+#include<stdio.h>
+int  gcp(int i,int j)
+{
+    int tem,gcp;
+    if(i<j)
+     { 
+       tem=j;
+       j=i;
+       i=tem;
+     }
+    while((i%j)!=0)
+    { 
+        i=j;
+        gcp=i%j;
+        j=gcp;
+    }
+      return(j);
+     
+}
+int  main()
+{
+    int  a,b,sun;
+    scanf("%d,%d",&a,&b);
+    sun=gcp(a,b);
+    printf("%d\n",sun);
+}
